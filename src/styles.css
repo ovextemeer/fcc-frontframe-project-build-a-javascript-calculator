@@ -1,0 +1,108 @@
+@font-face {
+  font-family: "DS-DIGI";
+  src: local("DS-DIGI"), url(./fonts/ds_digital/DS-DIGI.TTF) format(".TTF");
+}
+
+html,
+body,
+#root,
+.App {
+  font-family: sans-serif;
+  background-color: #c2c2d6;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media all and (max-width: 767px) {
+  .calculator {
+    width: 90vmin;
+    height: 100vmin;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .calculator {
+    width: 50vmin;
+    height: 60vmin;
+  }
+}
+
+.calculator {
+  border: 0.2rem solid grey;
+  background-color: black;
+  padding: 0.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#display2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: orange;
+  height: 1.4rem;
+  font-family: DS-DIGI, Share Tech Mono, monospace;
+  overflow-x: hidden;
+}
+
+#display {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: white;
+  height: 2rem;
+  font-size: 1.6rem;
+  font-family: DS-DIGI, Share Tech Mono, monospace;
+  overflow-x: hidden;
+}
+
+.controls {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 0.1rem;
+}
+
+button {
+  background-color: #4d4d4d;
+  border: 0;
+  color: white;
+  font-size: 1.2rem;
+}
+
+button:hover {
+  outline: 0.01rem solid #cccccc;
+  color: black;
+}
+
+#clear,
+#zero {
+  grid-column: 1 / span 2;
+}
+
+#clear {
+  background-color: rgb(172, 57, 57);
+}
+
+#equals {
+  grid-column: 4;
+  grid-row: 4 / span 2;
+  background-color: rgb(0, 68, 102);
+}
+
+#divide,
+#multiply,
+#subtract,
+#add {
+  background-color: rgb(102, 102, 102);
+}
